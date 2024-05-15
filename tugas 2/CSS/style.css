@@ -1,0 +1,52 @@
+p{
+    color: black;
+}
+#tes{
+    color: blanchedalmond;
+}
+#tes1{
+    color: blanchedalmond;
+}
+
+nav{
+    display: flex;
+    background-color: aqua;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+body{
+    margin: 0px 0px 50px;
+    background-image: url(../img/pattern.jpg);
+}
+
+ul{
+    list-style-type: none;
+}
+li{
+    display: inline;
+    margin-right: 20px;
+}
+a{
+    text-decoration: none;
+}
+main{
+    margin: 65px 150px 10px;
+    padding: 5px 5px;;
+    background-color: grey;
+}
+footer{
+    color: aquamarine;
+    display: flex;
+    background-color: black;
+    justify-content: center;
+}
+h2{
+    text-align: center;
+}
+article{
+    margin-top: 10px;
+    border-bottom: 2px solid black;
+}
