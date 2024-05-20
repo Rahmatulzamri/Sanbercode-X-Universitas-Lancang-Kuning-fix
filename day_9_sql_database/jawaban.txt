@@ -1,0 +1,36 @@
+1. Membuat Database
+CREATE DATABASE library;
+
+2. Membuat Table di Dalam Database
+
+CREATE TABLE Users ( id int AUTO_INCREMENT PRIMARY KEY, name varchar(225) NOT null, email varchar(225) NOT null, PASSWORD varchar(225) NOT null );
+
+CREATE TABLE categories ( id int AUTO_INCREMENT PRIMARY KEY, name varchar(255)NOT null);
+
+CREATE TABLE books ( id int AUTO_INCREMENT PRIMARY KEY, title varchar(255) NOT null, summary text NOT null, stock int NOT null, category_id int NOT null, FOREIGN KEY (category_id) REFERENCES categories(id));
+
+3. Memasukkan Data pada Table
+
+INSERT INTO users (name, email, password) VALUES ('Rahmatul Zamri','rahmatulzamri082003@gmail.com', 'tes12345'),('Jane', 'jane@doe.com', 'jenita123');
+
+INSERT INTO categories (name) VALUES ("Novel"),("Manga"),("Comic"),("History"),("IT");
+
+INSERT INTO books(title, summary, stock, catagory_id)VALUES("One piece","The series focuses on Monkey D Luffy, a young man made of rubber","50","2");
+INSERT INTO books(title, summary, stock, catagory_id)VALUES("Laskar Pelangi","Belitung is known for its richness in tin, making it one of Indonesia's richest islands, a young man made of rubber","25","1");
+INSERT INTO books(title, summary, stock, catagory_id)VALUES("Rahmatul Zamri","Rahmatul Zamri adalah seorang mahasiswa universitas lancang kuning fakultas ilmu komputer program studi sistem informasi dan sedang tinggal di salah satu kontrakan di pekanbaru","15","2");
+
+4. Mengambil Data dari Database
+
+   A. Mengambil data users
+SELECT id,name,email FROM users;
+
+   B. Mengambil data Books
+SELECT *FROM books WHERE stock >20;
+SELECT *FROM `books`WHERE title LIKE '%one%';
+
+   C. Menampilkan data items books dengan categories
+SELECT books.title, books.summary, books.stock, books.category_id, categories.name AS category FROM books LEFT JOIN categories ON books.category_id = categories.id;
+
+5. Mengubah Data dari Database
+UPDATE books SET stock=30 WHERE id= 1;
+
