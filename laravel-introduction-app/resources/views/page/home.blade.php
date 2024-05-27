@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Page Title</title>
-</head>
-<body>
+@extends('layouts.master')
+@section('title')
+Halaman Utama 
+@endsection
+
+@section('content')
 	<h1> SanberBook </h1>
 	<h2>Social Media Developer Santai Berkualitas</h2>
 	<p> Belajar dan Berbagi agar hidup ini semakin santai Berkualitas </p>
@@ -19,5 +19,5 @@
 		<li> mendaftar di <a href="/register">sing up </a></li> 
 		<li> Selesai! </li>
 	</oL>
-</body>
-</html>
+	@endsection
+
