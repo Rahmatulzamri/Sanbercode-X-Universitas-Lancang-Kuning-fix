@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\castController;
+use App\Http\Controllers\GameController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,4 +35,7 @@ Route::get('/data-table', function(){
 });
 
 
-Route::resource('cast', castController::class);
+Route::resource('cast', CastController::class);
+Route::resource('game', GameController::class);
+
+
